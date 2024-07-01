@@ -22,7 +22,7 @@
 // https://github.com/Freenove/Freenove_4WD_Car_Kit_for_ESP32/tree/master
 
 char *ssid_wifi = "Redmi Note 9";            // Le nom du réseau WiFi
-char *password_wifi = "hetic1234"; // Le password du WiFi
+char *password_wifi = "hetic12345"; // Le password du WiFi
 
 const char *mqtt_server = "192.168.43.114"; // L'IP de votre broker MQTT
 const int mqtt_interval_ms = 5000;          // L'interval en ms entre deux envois de données
@@ -88,9 +88,9 @@ void setup()
     // server_Cmd.begin(4000);    // Start the command server
     server_Camera.begin(7000); // Turn on the camera server
 
-    // cameraSetup(); // Camera initialization
-    // camera_vflip(true);
-    // camera_hmirror(true);
+    cameraSetup(); // Camera initialization
+    camera_vflip(true);
+    camera_hmirror(true);
     Emotion_Setup();    // Emotion initialization
     WS2812_Setup();     // WS2812 initialization
     PCA9685_Setup();    // PCA9685 initialization
@@ -108,7 +108,7 @@ void setup()
     initWebSocket();
 
     // server.on("/", HTTP_GET, [](AsyncWebServerRequest *request)
-    //           { 
+    //           {
     //             camera_fb_t *fb = NULL;
     //             fb = esp_camera_fb_get();
     //                     if (fb != NULL)
