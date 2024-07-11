@@ -21,15 +21,15 @@
 // https://randomnerdtutorials.com/esp32-static-fixed-ip-address-arduino-ide/
 // https://github.com/Freenove/Freenove_4WD_Car_Kit_for_ESP32/tree/master
 
-char *ssid_wifi = "Redmi Note 9";            // Le nom du réseau WiFi
-char *password_wifi = "hetic12345"; // Le password du WiFi
+char *ssid_wifi = "AndroidAP";            // Le nom du réseau WiFi
+char *password_wifi = "victomobile"; // Le password du WiFi
 
-const char *mqtt_server = "192.168.43.114"; // L'IP de votre broker MQTT
+const char *mqtt_server = "192.168.68.174"; // L'IP de votre broker MQTT
 const int mqtt_interval_ms = 5000;          // L'interval en ms entre deux envois de données
 
-IPAddress localIP(192,168,43,12); // l'IP que vous voulez donner à votre voiture
+IPAddress localIP(192,168,68,14); // l'IP que vous voulez donner à votre voiture
 
-IPAddress localGateway(192,168,43,1); // L'IP de la gateway de votre réseau
+IPAddress localGateway(192,168,68,39); // L'IP de la gateway de votre réseau
 IPAddress localSubnet(255, 255, 255, 0);  // Le masque de sous réseau
 
 IPAddress primaryDNS(8, 8, 8, 8);
