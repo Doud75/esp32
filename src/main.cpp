@@ -279,8 +279,8 @@ void handleWebSocketMessage(void *arg, uint8_t *data, size_t len)
         }
         else if (10 == cmd)
         {
-            track_activation = doc["data"] == 1;
-            mode = track_activation
+            bool track_activation = doc["data"] == 1;
+            mode = track_activation;
         }
 
         notifyClients();
