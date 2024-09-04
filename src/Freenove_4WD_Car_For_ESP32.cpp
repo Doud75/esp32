@@ -327,20 +327,20 @@ void Track_Car(int mode)
       Emotion_SetMode(3);
       Motor_Move(SPEED_LV1, SPEED_LV1, SPEED_LV1, SPEED_LV1); // Move Forward
       break;
-    case 0: // 000
-    case 7: // 111
+    case 7: // 000
+    case 0: // 111
       Emotion_SetMode(6);
       Motor_Move(0, 0, 0, 0); // Stop
       break;
     case 1: // 001
-    case 3: // 011
+    case 6: // 011
       Emotion_SetMode(4);
-      Motor_Move(-SPEED_LV3, -SPEED_LV3, SPEED_LV4, SPEED_LV4); // Turn Left
+      Motor_Move(-SPEED_LV2, -SPEED_LV2, SPEED_LV4, SPEED_LV4); // Turn Left
       break;
     case 4: // 100
-    case 6: // 110
+    case 3: // 110
       Emotion_SetMode(5);
-      Motor_Move(SPEED_LV4, SPEED_LV4, -SPEED_LV3, -SPEED_LV3); // Turn Right
+      Motor_Move(SPEED_LV4, SPEED_LV4, -SPEED_LV2, -SPEED_LV2); // Turn Right
       break;
 
     default:
